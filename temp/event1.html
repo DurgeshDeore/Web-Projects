@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is example of the event on the button</h1>
+    <form action="noting">
+        <input type="text" name="name" id="nameofperson" placeholder="Insert you name">
+        <button onClick="{alertMsg(name)}">click here</button>
+    </form>
+    <script>
+        var name = getElementById("nameofperson");
+        function alertMsg(){
+            alert("Hello "+name);
+        }
+    </script>
+</body>
+</html>

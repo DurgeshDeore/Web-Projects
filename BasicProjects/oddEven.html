@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Even</title>
+</head>
+<body>
+    <header>
+        <center>Odd Even Generator</center>
+    </header>
+    <main>
+        <div class="container">
+           <div id="oddeven">
+                <label for="num">Enter the number</label>
+                <input type="number" name="num" id="num">
+                <input type="text" name="name" id="name" placeholder="insert naem">
+           </div>
+        </div>
+        <button onclick="{oddeven()}">Find Answer</button>
+    </main>
+</body>
+<script>
+    var n= document.getElementById("num").value();
+    var user= document.getElementById("name");
+    function oddeven(name){
+        alert("hello "+ name);
+    }
+</script>
+</html>

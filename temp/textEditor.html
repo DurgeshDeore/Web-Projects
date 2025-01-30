@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Compiler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 200px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Compiler</h1>
+    <textarea id="code" placeholder="Write your code here..."></textarea>
+    <br>
+    <select id="language">
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="c">C</option>
+    </select>
+    <button onclick="runCode()">Run</button>
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+
+    <script>
+        async function runCode() {
+            const code = document.getElementById('code').value;
+            const language = document.getElementById('language').value;
+
+            const response = await fetch('http://localhost:5000/execute', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code, language }),
+            });
+
+            const result = await response.json();
+            document.getElementById('output').textContent = result.output || result.error;
+        }
+    </script>
+</body>
+</html>

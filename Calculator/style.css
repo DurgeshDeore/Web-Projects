@@ -1,0 +1,53 @@
+body{
+    background-color: white;
+    color: black;
+    height: 100vh;
+    margin-top:10%;
+}
+*{
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+}
+.calculator{
+    width: 50%;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo img{
+    height: 2rem;
+}
+.logo span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.functions{
+    padding: 0.4rem 0.2rem;
+}
+.functions img{
+    height: 1rem;
+}
+.functions span{
+    font-size: 1rem;
+}
+#expr{
+    width: 100%;
+    border-radius: 1rem;
+    height: 1.5rem;
+    margin: 10px;
+    border: 0.5px solid black;
+    padding: 0.2rem 1rem;
+}
+.buttons{
+    display: grid;
+    width:60%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+button{
+    height: 2rem;
+    border-radius: 1rem;
+}

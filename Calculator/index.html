@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/calculator-solid.svg">
+</head>
+<body>
+    <div class="calculator">
+        <div class="header">
+            <div class="logo">
+
+                <img src="images/calculator-solid.svg" alt="calculator">
+                <span>Calculator</span>
+            </div>
+
+            <div class="functions">
+                <button onclick="changeTheme()">
+                    <img id="theme-img" src="images/sun-solid.svg" alt="change-theme">
+                    <span id="theme-name">Light</span>
+                </button>
+            </div>
+        </div>
+        
+        <input type="text" name="expr" id="expr">
+        <div class="buttons">
+            <button id="n1" onclick="appendExpr('1')">1</button>
+            <button id="n2" onclick="appendExpr('2')">2</button>
+            <button id="n3" onclick="appendExpr('3')">3</button>
+            <button id="n4" onclick="appendExpr('+')">+</button>
+
+            <button id="n5" onclick="appendExpr('4')">4</button>
+            <button id="n6" onclick="appendExpr('5')">5</button>
+            <button id="n7" onclick="appendExpr('6')">6</button>
+            <button id="n8" onclick="appendExpr('-')">-</button>
+
+            <button id="n9" onclick="appendExpr('7')">7</button>
+            <button id="n10" onclick="appendExpr('8')">8</button>
+            <button id="n11" onclick="appendExpr('9')">9</button>
+            <button id="n12" onclick="appendExpr('*')">*</button>
+
+            <button id="n13" onclick="appendExpr('.')">.</button>
+            <button id="n14" onclick="appendExpr('0')">0</button>
+            <button id="n15" onclick="appendExpr('/')">/</button>
+            <button id="n16" onclick="cal()">Ans</button>
+
+            <button id="clear" onclick="clearExpr()">C</button>
+        </div>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+
+</html>
