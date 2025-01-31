@@ -1,2 +1,2 @@
-Dice Game Updated Succesfully.
-
+1.Dice Game Updated Succesfully.
+2.Calculator Updated Succesfully.
